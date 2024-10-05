@@ -1,9 +1,22 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "animate.css";
+import { AppDispatch } from "../../../redux/slices/store";
+import { useDispatch } from "react-redux";
+import { registerUser } from "../../../redux/slices/authSlice/asyncActions";
 
 const Signup = () => {
+  const [password, setPassword] = useState("");
+  const [username, setUsername] = useState("");
+  const [email, setEmail] = useState("");
   const [isFormAnimation, setIsFormAnimation] = useState(false);
+
+  const dispatch: AppDispatch = useDispatch();
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    dispatch(registerUser({ email, password, username }));
+  };
 
   useEffect(() => {
     setIsFormAnimation(!isFormAnimation);
@@ -24,7 +37,7 @@ const Signup = () => {
           Register
         </h1>
 
-        <form className="space-y-6">
+        <form onSubmit={handleSubmit} className="space-y-6">
           {/* Username */}
           <div>
             <label
@@ -36,6 +49,8 @@ const Signup = () => {
             <input
               type="text"
               id="username"
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
               className="w-full px-4 py-2 mt-2 bg-white/20 text-white placeholder-gray-400 rounded-md focus:ring-2 focus:ring-indigo-500 focus:outline-none"
               placeholder="Enter your username"
             />
@@ -52,6 +67,8 @@ const Signup = () => {
             <input
               type="email"
               id="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
               className="w-full px-4 py-2 mt-2 bg-white/20 text-white placeholder-gray-400 rounded-md focus:ring-2 focus:ring-indigo-500 focus:outline-none"
               placeholder="Enter your email"
             />
@@ -68,6 +85,8 @@ const Signup = () => {
             <input
               type="password"
               id="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
               className="w-full px-4 py-2 mt-2 bg-white/20 text-white placeholder-gray-400 rounded-md focus:ring-2 focus:ring-indigo-500 focus:outline-none"
               placeholder="Enter your password"
             />

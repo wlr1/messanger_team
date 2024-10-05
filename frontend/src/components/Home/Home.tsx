@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const Messanger = () => {
+const Home = () => {
   return (
     <div className="min-h-screen bg-gradient-to-b from-[#632828] to-black items-center justify-center">
       <div className="container mx-auto px-4 text-white">
@@ -289,4 +289,4 @@ const Messanger = () => {
   );
 };
 
-export default Messanger;
+export default Home;
