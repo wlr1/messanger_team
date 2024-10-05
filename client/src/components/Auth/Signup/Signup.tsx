@@ -25,38 +25,6 @@ const Signup = () => {
         </h1>
 
         <form className="space-y-6">
-          {/* First Name */}
-          <div>
-            <label
-              htmlFor="firstName"
-              className="block text-sm font-medium text-gray-300"
-            >
-              First Name
-            </label>
-            <input
-              type="text"
-              id="firstname"
-              className="w-full px-4 py-2 mt-2 bg-white/20 text-white placeholder-gray-400 rounded-md focus:ring-2 focus:ring-indigo-500 focus:outline-none"
-              placeholder="Enter your first name"
-            />
-          </div>
-
-          {/* Last Name */}
-          <div>
-            <label
-              htmlFor="lastName"
-              className="block text-sm font-medium text-gray-300"
-            >
-              Last Name
-            </label>
-            <input
-              type="text"
-              id="lastname"
-              className="w-full px-4 py-2 mt-2 bg-white/20 text-white placeholder-gray-400 rounded-md focus:ring-2 focus:ring-indigo-500 focus:outline-none"
-              placeholder="Enter your last name"
-            />
-          </div>
-
           {/* Username */}
           <div>
             <label
