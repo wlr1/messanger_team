@@ -1,7 +1,7 @@
 import { PayloadAction } from "./../../../../node_modules/@reduxjs/toolkit/src/createAction";
 import { createSlice } from "@reduxjs/toolkit";
 import { AuthState } from "../../../utility/types";
-import { registerUser } from "./asyncActions";
+import { loginUser, registerUser } from "./asyncActions";
 
 const initialState: AuthState = {
   error: null,
@@ -15,8 +15,14 @@ const authSlice = createSlice({
   reducers: {},
   extraReducers: (builder) => {
     builder
+      //register
       .addCase(registerUser.fulfilled, (state) => {
         state.isLoading = false;
+      })
+      //login
+      .addCase(loginUser.fulfilled, (state, action) => {
+        state.isLoading = false;
+        state.user = action.payload;
       })
       .addMatcher(
         (action) => action.type.endsWith("/pending"),
