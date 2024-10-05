@@ -8,7 +8,7 @@ export const registerUser = createAsyncThunk(
     thunkAPI
   ) => {
     try {
-      const res = await api.post("/auth/register/", userData);
+      const res = await api.post("/auth/register", userData);
       return res.data;
     } catch (error: any) {
       return thunkAPI.rejectWithValue(
@@ -26,7 +26,8 @@ export const loginUser = createAsyncThunk(
   ) => {
     try {
       const res = await api.post("/auth/login", { email, password });
-      return res.data;
+      localStorage.setItem("token", res.data.token);
+      return res.data.user;
     } catch (error: any) {
       return thunkAPI.rejectWithValue(
         error.response?.data || "Failed to login"

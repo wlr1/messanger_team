@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "animate.css";
-import { AppDispatch } from "../../../redux/slices/store";
-import { useDispatch } from "react-redux";
+import { AppDispatch, RootState } from "../../../redux/slices/store";
+import { useDispatch, useSelector } from "react-redux";
 import { registerUser } from "../../../redux/slices/authSlice/asyncActions";
 
 const Signup = () => {
@@ -11,11 +11,17 @@ const Signup = () => {
   const [email, setEmail] = useState("");
   const [isFormAnimation, setIsFormAnimation] = useState(false);
 
+  const { error } = useSelector((state: RootState) => state.auth);
   const dispatch: AppDispatch = useDispatch();
+
+  const navigate = useNavigate();
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     dispatch(registerUser({ email, password, username }));
+    if (error) {
+      navigate("/login");
+    }
   };
 
   useEffect(() => {

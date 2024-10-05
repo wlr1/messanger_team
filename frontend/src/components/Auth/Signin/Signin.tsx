@@ -1,9 +1,37 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "animate.css";
+import { AppDispatch, RootState } from "../../../redux/slices/store";
+import { useDispatch, useSelector } from "react-redux";
+import { loginUser } from "../../../redux/slices/authSlice/asyncActions";
 
 const Signin = () => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const [isFormAnimation, setIsFormAnimation] = useState(false);
+
+  const dispatch: AppDispatch = useDispatch();
+  // const { error } = useSelector((state: RootState) => state.auth);
+
+  const navigate = useNavigate();
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+
+    const resultAction = await dispatch(loginUser({ email, password }));
+
+    if (loginUser.fulfilled.match(resultAction)) {
+      const token = resultAction.payload?.token;
+      if (token) {
+        navigate("/c");
+      } else {
+        console.log("Token is undefined");
+        console.log()
+      }
+    } else {
+      console.log("Login failed: ", resultAction.payload);
+    }
+  };
 
   useEffect(() => {
     setIsFormAnimation(!isFormAnimation);
@@ -24,7 +52,7 @@ const Signin = () => {
           Sign In
         </h1>
 
-        <form className="space-y-6">
+        <form onSubmit={handleSubmit} className="space-y-6">
           {/* Email Field */}
           <div>
             <label
@@ -36,6 +64,8 @@ const Signin = () => {
             <input
               type="email"
               id="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
               className="w-full px-4 py-2 mt-2 bg-white/20 text-white placeholder-gray-400 rounded-md focus:ring-2 focus:ring-indigo-500 focus:outline-none"
               placeholder="Enter your email"
             />
@@ -52,6 +82,8 @@ const Signin = () => {
             <input
               type="password"
               id="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
               className="w-full px-4 py-2 mt-2 bg-white/20 text-white placeholder-gray-400 rounded-md focus:ring-2 focus:ring-indigo-500 focus:outline-none"
               placeholder="Enter your password"
             />
