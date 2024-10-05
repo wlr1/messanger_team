@@ -5,17 +5,13 @@ import {
 } from "react-router-dom";
 import Signin from "./components/Auth/Signin/Signin";
 import Signup from "./components/Auth/Signup/Signup";
-import Messanger from "./components/Messanger/Messanger";
+import Messanger from "./components/Home/Messanger";
 
 function App() {
   const router = createBrowserRouter([
-    {
-      path: "/",
-      element: <Navigate to="/login" replace />,
-    },
+    { path: "/", element: <Messanger /> },
     { path: "/login", element: <Signin /> },
     { path: "/register", element: <Signup /> },
-    { path: "/c", element: <Messanger /> },
   ]);
 
   return (
