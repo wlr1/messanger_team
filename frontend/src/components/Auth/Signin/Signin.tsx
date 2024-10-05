@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "animate.css";
-import { AppDispatch, RootState } from "../../../redux/slices/store";
-import { useDispatch, useSelector } from "react-redux";
+import { AppDispatch } from "../../../redux/slices/store";
+import { useDispatch } from "react-redux";
 import { loginUser } from "../../../redux/slices/authSlice/asyncActions";
 
 const Signin = () => {
@@ -26,7 +26,6 @@ const Signin = () => {
         navigate("/c");
       } else {
         console.log("Token is undefined");
-        console.log()
       }
     } else {
       console.log("Login failed: ", resultAction.payload);
