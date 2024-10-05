@@ -30,7 +30,7 @@ const Messanger = () => {
             </a>
             <a
               href="#"
-              className="text-white bg-transparent hover:bg-white/15 hover:text-white transition-transform transform hover:scale-105  rounded-lg px-4 py-2 "
+              className="text-[#DB5353] bg-transparent hover:bg-white/15 hover:text-white transition-transform transform hover:scale-105  rounded-lg px-4 py-2 "
             >
               Sign Up
             </a>
@@ -49,11 +49,10 @@ const Messanger = () => {
               provide an opportunity to communicate anonymously.
             </p>
             <div className="flex justify-center lg:justify-start space-x-12 mb-8 mt-10 ">
-              <button className="hover:bg-transparent border hover:border-white/20 hover:text-white py-4 px-12 rounded-lg bg-white text-[#DB5353] transition duration-300">
+              <button className="bg-transparent border border-white/20 py-4 px-12 rounded-lg hover:bg-white hover:text-[#DB5353] transition duration-300">
                 Sign Up
               </button>
-
-              <button className="hover:bg-transparent border hover:border-white/20 hover:text-white py-4 px-12 rounded-lg bg-white text-[#DB5353] transition duration-300">
+              <button className="bg-transparent border border-white/20 py-4 px-12 rounded-lg hover:bg-white hover:text-[#DB5353] transition duration-300">
                 Learn More
               </button>
             </div>

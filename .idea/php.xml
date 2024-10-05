@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="MessDetectorOptionsConfiguration">
+    <option name="transferred" value="true" />
+  </component>
+  <component name="PHPCSFixerOptionsConfiguration">
+    <option name="transferred" value="true" />
+  </component>
+  <component name="PHPCodeSnifferOptionsConfiguration">
+    <option name="highlightLevel" value="WARNING" />
+    <option name="transferred" value="true" />
+  </component>
+  <component name="PhpIncludePathManager">
+    <include_path>
+      <path value="$PROJECT_DIR$/backend/vendor/composer" />
+      <path value="$PROJECT_DIR$/backend/vendor/aws/aws-crt-php" />
+      <path value="$PROJECT_DIR$/backend/vendor/aws/aws-sdk-php" />
+      <path value="$PROJECT_DIR$/backend/vendor/psr/cache" />
+      <path value="$PROJECT_DIR$/backend/vendor/psr/container" />
+      <path value="$PROJECT_DIR$/backend/vendor/psr/clock" />
+      <path value="$PROJECT_DIR$/backend/vendor/psr/http-factory" />
+      <path value="$PROJECT_DIR$/backend/vendor/psr/http-client" />
+      <path value="$PROJECT_DIR$/backend/vendor/psr/log" />
+      <path value="$PROJECT_DIR$/backend/vendor/psr/http-message" />
+      <path value="$PROJECT_DIR$/backend/vendor/psy/psysh" />
+      <path value="$PROJECT_DIR$/backend/vendor/psr/simple-cache" />
+      <path value="$PROJECT_DIR$/backend/vendor/leafs/aloe" />
+      <path value="$PROJECT_DIR$/backend/vendor/voku/portable-ascii" />
+      <path value="$PROJECT_DIR$/backend/vendor/leafs/auth" />
+      <path value="$PROJECT_DIR$/backend/vendor/leafs/anchor" />
+      <path value="$PROJECT_DIR$/backend/vendor/leafs/cors" />
+      <path value="$PROJECT_DIR$/backend/vendor/leafs/blade" />
+      <path value="$PROJECT_DIR$/backend/vendor/leafs/db" />
+      <path value="$PROJECT_DIR$/backend/vendor/leafs/date" />
+      <path value="$PROJECT_DIR$/backend/vendor/leafs/exception" />
+      <path value="$PROJECT_DIR$/backend/vendor/leafs/devtools" />
+      <path value="$PROJECT_DIR$/backend/vendor/leafs/fs" />
+      <path value="$PROJECT_DIR$/backend/vendor/leafs/form" />
+      <path value="$PROJECT_DIR$/backend/vendor/leafs/leaf" />
+      <path value="$PROJECT_DIR$/backend/vendor/leafs/http" />
+      <path value="$PROJECT_DIR$/backend/vendor/leafs/mvc-core" />
+      <path value="$PROJECT_DIR$/backend/vendor/leafs/logger" />
+      <path value="$PROJECT_DIR$/backend/vendor/leafs/router" />
+      <path value="$PROJECT_DIR$/backend/vendor/leafs/password" />
+      <path value="$PROJECT_DIR$/backend/vendor/nikic/php-parser" />
+      <path value="$PROJECT_DIR$/backend/vendor/leafs/session" />
+      <path value="$PROJECT_DIR$/backend/vendor/vlucas/phpdotenv" />
+      <path value="$PROJECT_DIR$/backend/vendor/nesbot/carbon" />
+      <path value="$PROJECT_DIR$/backend/vendor/symfony/deprecation-contracts" />
+      <path value="$PROJECT_DIR$/backend/vendor/symfony/console" />
+      <path value="$PROJECT_DIR$/backend/vendor/symfony/polyfill-ctype" />
+      <path value="$PROJECT_DIR$/backend/vendor/symfony/finder" />
+      <path value="$PROJECT_DIR$/backend/vendor/symfony/polyfill-intl-normalizer" />
+      <path value="$PROJECT_DIR$/backend/vendor/symfony/polyfill-intl-grapheme" />
+      <path value="$PROJECT_DIR$/backend/vendor/symfony/polyfill-php73" />
+      <path value="$PROJECT_DIR$/backend/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/backend/vendor/symfony/process" />
+      <path value="$PROJECT_DIR$/backend/vendor/symfony/polyfill-php80" />
+      <path value="$PROJECT_DIR$/backend/vendor/symfony/string" />
+      <path value="$PROJECT_DIR$/backend/vendor/symfony/service-contracts" />
+      <path value="$PROJECT_DIR$/backend/vendor/symfony/translation-contracts" />
+      <path value="$PROJECT_DIR$/backend/vendor/symfony/translation" />
+      <path value="$PROJECT_DIR$/backend/vendor/symfony/var-dumper" />
+      <path value="$PROJECT_DIR$/backend/vendor/doctrine/cache" />
+      <path value="$PROJECT_DIR$/backend/vendor/doctrine/deprecations" />
+      <path value="$PROJECT_DIR$/backend/vendor/doctrine/dbal" />
+      <path value="$PROJECT_DIR$/backend/vendor/doctrine/inflector" />
+      <path value="$PROJECT_DIR$/backend/vendor/doctrine/event-manager" />
+      <path value="$PROJECT_DIR$/backend/vendor/carbonphp/carbon-doctrine-types" />
+      <path value="$PROJECT_DIR$/backend/vendor/fakerphp/faker" />
+      <path value="$PROJECT_DIR$/backend/vendor/phpoption/phpoption" />
+      <path value="$PROJECT_DIR$/backend/vendor/mtdowling/jmespath.php" />
+      <path value="$PROJECT_DIR$/backend/vendor/guzzlehttp/guzzle" />
+      <path value="$PROJECT_DIR$/backend/vendor/ralouphie/getallheaders" />
+      <path value="$PROJECT_DIR$/backend/vendor/guzzlehttp/psr7" />
+      <path value="$PROJECT_DIR$/backend/vendor/guzzlehttp/promises" />
+      <path value="$PROJECT_DIR$/backend/vendor/illuminate/collections" />
+      <path value="$PROJECT_DIR$/backend/vendor/illuminate/bus" />
+      <path value="$PROJECT_DIR$/backend/vendor/illuminate/container" />
+      <path value="$PROJECT_DIR$/backend/vendor/illuminate/console" />
+      <path value="$PROJECT_DIR$/backend/vendor/illuminate/database" />
+      <path value="$PROJECT_DIR$/backend/vendor/illuminate/contracts" />
+      <path value="$PROJECT_DIR$/backend/vendor/illuminate/filesystem" />
+      <path value="$PROJECT_DIR$/backend/vendor/illuminate/events" />
+      <path value="$PROJECT_DIR$/backend/vendor/illuminate/pipeline" />
+      <path value="$PROJECT_DIR$/backend/vendor/illuminate/macroable" />
+      <path value="$PROJECT_DIR$/backend/vendor/illuminate/view" />
+      <path value="$PROJECT_DIR$/backend/vendor/illuminate/support" />
+      <path value="$PROJECT_DIR$/backend/vendor/graham-campbell/result-type" />
+    </include_path>
+  </component>
+  <component name="PhpProjectSharedConfiguration" php_language_level="8.2" />
+  <component name="PhpStanOptionsConfiguration">
+    <option name="transferred" value="true" />
+  </component>
+  <component name="PsalmOptionsConfiguration">
+    <option name="transferred" value="true" />
+  </component>
+</project>
