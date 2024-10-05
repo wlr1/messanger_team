@@ -1,7 +1,13 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 const Home = () => {
+  const [isFormAnimation, setIsFormAnimation] = useState(false);
+
+  useEffect(() => {
+    setIsFormAnimation(!isFormAnimation);
+  }, []);
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-[#632828] to-black items-center justify-center">
       <div className="container mx-auto px-4 text-white">
@@ -41,7 +47,11 @@ const Home = () => {
         {/* Main content */}
         <main className="flex flex-col lg:flex-row items-center justify-between mt-16">
           {/* Left content */}
-          <div className="max-w-lg text-center lg:text-left mb-28">
+          <div
+            className={`max-w-lg text-center lg:text-left mb-28 animate__animated animate__slow ${
+              isFormAnimation ? "animate__fadeIn" : ""
+            }`}
+          >
             <h1 className="text-4xl font-bold leading-9 w-[333px] mb-20">
               Welcome to [name] – your anonymity!
             </h1>
@@ -65,7 +75,11 @@ const Home = () => {
 
           {/* Right content: phone mockup */}
           <div className="mr-20 mb-16">
-            <div className="flex items-center justify-center text-center">
+            <div
+              className={`flex items-center justify-center text-center animate__animated animate__slow ${
+                isFormAnimation ? "animate__backInDown" : ""
+              }`}
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="300"
